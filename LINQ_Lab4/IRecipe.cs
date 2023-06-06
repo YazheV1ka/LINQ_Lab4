@@ -2,5 +2,5 @@
 
 public interface IRecipe
 {
-    void Extend(int days);
+    public void Extend(int days);
 }

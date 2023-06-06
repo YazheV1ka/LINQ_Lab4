@@ -11,14 +11,7 @@ public class RecipeProxy : IRecipe
 
     public void Extend(int days)
     {
-        if (DateTime.Now.AddDays(days) > _recipe._expirationDate)
-        {
-            Console.WriteLine("Error: cannot extend expiration date beyond original expiration date.");
-        }
-        else
-        {
-            _recipe.Extend(days);
-        }
+        _recipe.Extend(days);
     }
 
     public override string ToString()

@@ -12,12 +12,14 @@ public class Recipe : IRecipe
 
     public void Extend(int days)
     {
+        var tmp = _expirationDate;
         _expirationDate = _expirationDate.AddDays(days);
-        Console.WriteLine($"Expiration date extended by {days} days. New expiration date: {_expirationDate}");
+        Console.WriteLine($"Expiration date extended by {days} days. Old expiration date: {tmp}. New expiration date: {_expirationDate}");
     }
     
     public override string ToString()
     {
         return $"Doctor: {_doctorName}, Expiration Date: {_expirationDate}";
     }
+
 }
